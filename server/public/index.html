@@ -10,13 +10,11 @@
 </head>
 <body ng-app="FoodApp" ng-controller="FoodController as vm">
     <h1>Angular Restaurant</h1>
-    <input placeholder="New Food Here" ng-model="vm.foodToAdd">
+    <input type="text"placeholder="New Food Here" ng-model="vm.foodToAdd.name">
+    <input type="number" placeholder="Deliciousness Rating" ng-model="vm.foodToAdd.deliciousness">
     <button ng-click="vm.addFood(vm.foodToAdd)">Add food</button>
     <ul>
-        <li ng-repeat="food in vm.foods">{{food.name}}</li>
+        <li ng-repeat="food in vm.foods">{{food.name}} has a deliciousness rating of {{food.deliciousness}}</li>
     </ul>
-    <div>
-        {{vm}}
-    </div>
 </body>
 </html>

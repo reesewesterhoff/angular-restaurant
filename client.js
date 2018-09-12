@@ -9,4 +9,11 @@ foodApp.controller('FoodController', function(){
         {name: 'taco'},
         {name: 'potato'}
     ];
+    self.foodToAdd = '';
+
+    self.addFood = function(newFood) {
+        console.log('in addFood');
+        self.foods.push({name: newFood});
+        self.foodToAdd = '';
+    }
 });

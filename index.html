@@ -10,6 +10,8 @@
 </head>
 <body ng-app="FoodApp" ng-controller="FoodController as vm">
     <h1>Angular Restaurant</h1>
+    <input placeholder="New Food Here" ng-model="vm.foodToAdd">
+    <button ng-click="vm.addFood(vm.foodToAdd)">Add food</button>
     <ul>
         <li ng-repeat="food in vm.foods">{{food.name}}</li>
     </ul>

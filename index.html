@@ -8,7 +8,13 @@
     <script src="client.js"></script>
     <title>Angular Restaurant</title>
 </head>
-<body>
+<body ng-app="FoodApp" ng-controller="FoodController as vm">
     <h1>Angular Restaurant</h1>
+    <ul>
+        <li ng-repeat="food in vm.foods">{{food.name}}</li>
+    </ul>
+    <div>
+        {{vm}}
+    </div>
 </body>
 </html>
